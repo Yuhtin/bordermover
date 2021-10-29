@@ -15,6 +15,8 @@ public class UseBorderCommand implements CommandExecutor {
         if (args.length > 0 && args[0].equalsIgnoreCase("reload")) {
             plugin.reloadConfig();
             borderManager.load();
+
+            sender.sendMessage("§aPlugin recarregado com sucesso.");
             return false;
         }
 

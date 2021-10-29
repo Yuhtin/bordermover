@@ -24,7 +24,7 @@ dependencies {
 }
 
 bukkit {
-    main = 'com.yuhtin.commission.bordermover.BorderMover'
+    main = 'com.yuhtin.commission.bordermover.Core'
     authors = ['Yuhtin']
     version = "${project.version}"
     apiVersion = '1.13'
