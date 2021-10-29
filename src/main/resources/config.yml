@@ -1,0 +1,15 @@
+bordas:
+  primeira:
+    # Tempo que irá demorar depois da execução do comando
+    # para esta borda funcionar
+    tempoDepois: 0
+    # Tempo para a borda chegar a quantidade de blocos definida
+    tempoMovimento: 30
+    # Tamanho da borda
+    # 1200 = 600x600
+    # 2400 = 1200x1200
+    blocos: 1200
+  segunda:
+    tempoDepois: 35
+    tempoMovimento: 30
+    blocos: 1100
