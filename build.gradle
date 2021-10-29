@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+
+    id 'com.github.johnrengelman.shadow' version '6.0.0'
+    id 'net.minecrell.plugin-yml.bukkit' version '0.3.0'
+}
+
+group 'com.yuhtin.commission'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = 'https://oss.sonatype.org/content/groups/public/' }
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:1.17.1-R0.1-SNAPSHOT"
+
+    def lombok = 'org.projectlombok:lombok:1.18.16'
+    compileOnly lombok
+    annotationProcessor lombok
+}
+
+bukkit {
+    main = 'com.yuhtin.commission.bordermover.BorderMover'
+    authors = ['Yuhtin']
+    version = "${project.version}"
+    apiVersion = '1.13'
+    load = 'POSTWORLD'
+    commands {
+        moverborda {
+            permission = 'board.move'
+            aliases = ['ativarborda']
+        }
+    }
+}
+
+shadowJar {
+    archiveName("${project.name}-${project.version}.jar")
+}
+
+compileJava {
+    options.encoding('UTF-8')
+
+    sourceCompatibility('1.8')
+    targetCompatibility('1.8')
+}
