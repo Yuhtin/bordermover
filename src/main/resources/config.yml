@@ -9,7 +9,10 @@ bordas:
     # 1200 = 600x600
     # 2400 = 1200x1200
     blocos: 1200
+    # Nome do mundo
+    mundo: 'glad'
   segunda:
     tempoDepois: 35
     tempoMovimento: 30
     blocos: 1100
+    mundo: 'glad'

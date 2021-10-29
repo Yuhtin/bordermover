@@ -20,6 +20,7 @@ public class BorderManager {
         val config = Core.getInstance().getConfig();
         for (String key : config.getConfigurationSection("bordas").getKeys(false)) {
             cache.getBorders().add(Border.builder()
+                    .worldName(config.getString("bordas." + key + ".mundo"))
                     .blocks(config.getInt("bordas." + key + ".blocos"))
                     .moveTime(config.getInt("bordas." + key + ".tempoMovimento"))
                     .timeAfter(config.getInt("bordas." + key + ".tempoDepois"))
